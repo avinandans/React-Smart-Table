@@ -1,3 +1,4 @@
+import { TableProvider } from "./context/TableContext";
 import { Routers } from "./routes";
 import { MantineProvider, createTheme } from "@mantine/core";
 import { StrictMode } from "react";
@@ -18,7 +19,9 @@ const Root = createRoot(document.getElementById("root") as HTMLDivElement);
 Root.render(
   <StrictMode>
     <MantineProvider theme={MantineTheme}>
-      <RouterProvider router={Routers} />
+      <TableProvider>
+        <RouterProvider router={Routers} />
+      </TableProvider>
     </MantineProvider>
   </StrictMode>,
 );

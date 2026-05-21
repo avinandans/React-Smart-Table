@@ -1,5 +1,6 @@
+import { TableContext } from "../context/TableContext";
 import { generateData } from "../utils/generateData";
-import { useMemo } from "react";
+import { useContext, useMemo } from "react";
 
 export function useMockData() {
   const data = useMemo(() => {
@@ -7,4 +8,14 @@ export function useMockData() {
   }, []);
 
   return data;
+}
+
+export function useTableContext() {
+  const context = useContext(TableContext);
+
+  if (context == null) {
+    throw new Error("useTableContext must be used within TableProvider");
+  }
+
+  return context;
 }
