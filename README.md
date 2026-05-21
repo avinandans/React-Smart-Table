@@ -16,4 +16,4 @@ It has support for:
 - `shx` for OS agnostic CLI ✅
 - Unit testing via Jest and `ts-jest`.
 
-This template repository is to be used for creating any new Manufac's ReactJS based project.
+This template repository is to be used for creating any new ReactJS based project.
